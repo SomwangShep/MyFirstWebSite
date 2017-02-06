@@ -1,0 +1,104 @@
+html, body {font-family: serif, sans-serif, cursive, fantasy;}
+
+header, #sidebar, #main, footer 
+{
+  border: 2px solid black;
+  z-index: 0
+}
+
+header 
+{
+  position: absolute;
+  top: 0px;
+  height: 100px;
+  right: 0px;
+  left: 154px;
+  text-align: center;
+  background-color: #9A84EC;  
+}
+
+#sidebar 
+{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 150px;
+  font-size:larger;
+  color:blue;
+}
+
+	#sidebar ul 
+	{
+		  margin: 0;
+		  padding: 0;
+	}
+	#sidebar ul li 
+	{
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+	}
+
+#main {
+  position: absolute;
+  top: 104px;
+  bottom: 54px;
+  left: 154px;
+  right: 0px;
+  padding: 0px;
+  z-index: 0;
+  width:auto;
+  height:auto;
+}
+#main iframe {
+	z-index: 0;
+}
+
+
+footer 
+{
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  left: 154px;
+  right: 0px;
+  font-size:small;
+  text-align: center;
+}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+sup {font-size: small;}
+
+.paddedBox {padding: 0 30px 0 30px;}
+.codes {color:green;}
+.ind2{padding: 0 30px 0 80px;}
+
+.codeblock 
+{
+	padding: 10px;
+	font-family: monospace;
+	border: 1px solid #aaaaaa;
+	background-color: #dddddd;
+	color: #000000;
+	white-space: pre;
+}
+
+h1 {text-align: center;}
+
+#teammember
+{
+  top: 104px;
+  text-align: center;
+  font-size: large;
+  
+}
+
+.required {opacity: 0.0}
+
+.in-error {border: 2px solid red}
+
+table, td, th { border: 1px solid gray }
+
+iframe{ width: 100%; height: 100%;}

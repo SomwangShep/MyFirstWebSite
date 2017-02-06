@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset = "utf-8"/>
+		<link rel="stylesheet" type="text/css" href="java.css" />
+		<script src="jquery.js"> </script>
+		<script src="java.js"></script>
+		<title>Feedback</title>
+	</head>
+	<body>
+		<div class="paddedBox">
+
+	<p>
+			<a href="Q_WhileLoops.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_WhileLoops', window.parent.document).css('font-weight','bold');">&lt;&lt; Previous : </a>
+			<a href="GroupNames.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuGroupNames', window.parent.document).css('font-weight','bold');">Next &gt;&gt;</a>
+	</p>
+
+		<h1>Feedback</h1>
+
+		<form>
+
+		<p id="cust-name">
+			<label> Your Name:
+			<input type="text" name="custname" autofocus required>
+			</label>
+		</p>
+
+      <p id="email-address">
+      <label>
+      	Your E-mail:
+      		<input type="email" name="custemail" onchange="verifyEmail(this,
+                                           '#emailinvalid',
+                                           '#email-address');" required>
+      	</label>
+      	<span id ="emailinvalid">Email format x@x.xxx</span>
+      	</p>
+
+     	<p><label>Your comments:<br/> <textarea name="comments" rows="15" cols="50" required></textarea></label></p>
+      	<p><button>Submit</button></p>
+
+		</form>
+
+	<p>
+			<a href="Q_WhileLoops.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_WhileLoops', window.parent.document).css('font-weight','bold');">&lt;&lt; Previous : </a>
+			<a href="GroupNames.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuGroupNames', window.parent.document).css('font-weight','bold');">Next &gt;&gt;</a>
+	</p>
+
+		</div>
+	</body>
+</html>

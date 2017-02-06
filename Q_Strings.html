@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset = "utf-8"/>
+		<link rel="stylesheet" type="text/css" href="java.css" />
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="java.js"></script>
+		<title>Strings</title>
+	</head>
+	<body>
+		<div class="paddedBox">
+
+	<p>
+			<a href="Q_Arrays.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_Arrays', window.parent.document).css('font-weight','bold');">&lt;&lt; Previous : </a>
+			<a href="Q_WhileLoops.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_IfStatements', window.parent.document).css('font-weight','bold');">Next &gt;&gt;</a>
+	</p>
+
+		<h1>Strings</h1>
+		<ol>
+			<li>What is returned by this method call?
+<pre>
+String s3 = "So Elvis has left the building.";
+s3.indexOf("u")
+</pre>
+			<p><label> <input type="radio" name="VariableQ1" value="22" > 22 </label></p>
+			<p><label> <input id="correct1" type="radio" name="VariableQ1" value="23" > 23 </label></p>
+			<p><label> <input type="radio" name="VariableQ1" value="24" > 24 </label></p>
+			<p><label> <input type="radio" name="VariableQ1" value="runtime error" > runtime error </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+int x = 7;
+String s4 = "Ask me no questions and I'll tell you no lies";
+
+s4.substring(x, 15)
+</pre>
+			<p><label> <input type="radio" name="VariableQ2" value="no quest" > no quest </label></p>
+			<p><label> <input type="radio" name="VariableQ2" value="o questi" > o questi </label></p>
+			<p><label> <input type="radio" name="VariableQ2" value=" no ques" >  no ques </label></p>
+			<p><label> <input id="correct2" type="radio" name="VariableQ2" value="no questions and I'll tell you no lies" > no questions and I'll tell you no lies </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+int z = 25;
+int x = 2;
+String s4 = "If you immediately know the candle light is fire";
+
+s4.substring(x + 3, z - 3)
+</pre>
+			<p><label> <input type="radio" name="VariableQ3" value="If you" > If you </label></p>
+			<p><label> <input type="radio" name="VariableQ3" value="ou immediately kn" > ou immediately kn </label></p>
+			<p><label> <input id="correct3" type="radio" name="VariableQ3" value="u immediately kno" >u immediately kno</label></p>
+			<p><label> <input type="radio" name="VariableQ3" value="If you immediately know the candle light is fire" > If you immediately know the candle light is fire </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+String s2 = "Sharing is Caring";
+
+s2.contains("i")
+</pre>
+			<p><label> <input id="correct4" type="radio" name="VariableQ4" value="True" > True </label></p>
+			<p><label> <input type="radio" name="VariableQ4" value="False" > False </label></p>
+			<p><label> <input type="radio" name="VariableQ4" value="none of the above" > none of the above </label></p>
+			<p><label> <input type="radio" name="VariableQ4" value="run time error" > run time error </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+String word = "bunnies";
+
+"e".equals(word)
+</pre>
+			<p><label> <input id="correct5" type="radio" name="VariableQ5" value="False" > False </label></p>
+			<p><label> <input type="radio" name="VariableQ5" value="True" > True </label></p>
+			<p><label> <input type="radio" name="VariableQ5" value="none of the above" > none of the above </label></p>
+			<p><label> <input type="radio" name="VariableQ5" value="run time error" > run time error </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+String s4 = "Actions speak louder than words";
+
+s4.substring(10).length()
+</pre>
+
+			<p><label> <input type="radio" name="VariableQ6" value="19" > 19 </label></p>
+			<p><label> <input type="radio" name="VariableQ6" value="20" > 20 </label></p>
+			<p><label> <input id="correct6" type="radio" name="VariableQ6" value="21" > 21 </label></p>
+			<p><label> <input type="radio" name="VariableQ6" value="22" > 22 </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+String s1 = "Beam me up, Scotty";
+String letter1 = "i";
+
+s1.contains(letter1)
+</pre>
+			<p><label> <input id="correct7" type="radio" name="VariableQ7" value="False" > False </label></p>
+			<p><label> <input type="radio" name="VariableQ7" value="True" > True </label></p>
+			<p><label> <input type="radio" name="VariableQ7" value="none of the above" > none of the above </label></p>
+			<p><label> <input type="radio" name="VariableQ7" value="run time error" > run time error </label></p>
+			</li>
+
+			<li>
+<pre>
+String s3 = "All good things must come to an end";
+String letter2 = "e";
+
+s3.indexOf(letter2)
+</pre>
+			<p><label> <input id="correct8" type="radio" name="VariableQ8" value="24" > 24 </label></p>
+			<p><label> <input type="radio" name="VariableQ8" value="25" > 25 </label></p>
+			<p><label> <input type="radio" name="VariableQ8" value="26" > 26 </label></p>
+			<p><label> <input type="radio" name="VariableQ8" value="none of the above" > none of the above </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+String s4 = "I'll make him an offer he can't refuse.";
+String s3 = "To be or not to be, that is the question.";
+
+s3.charAt(s4.substring(5).substring(17).length())
+</pre>
+			<p><label> <input type="radio" name="VariableQ9" value="To be or not to be" > To be or not to be </label></p>
+			<p><label> <input type="radio" name="VariableQ9" value=", that is the question." > , that is the question. </label></p>
+			<p><label> <input id="correct9" type="radio" name="VariableQ9" value="e" > e </label></p>
+			<p><label> <input type="radio" name="VariableQ9" value="none of the above" > none of the above </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+String s3 = "I'm Sorry Dave.  I'm afraid I can't do that.";
+s3.charAt(s3.indexOf("o") + 5);
+</pre>
+			<p><label> <input type="radio" name="VariableQ10" value="o" > o </label></p>
+			<p><label> <input type="radio" name="VariableQ10" value="a" > a </label></p>
+			<p><label> <input id="correct10" type="radio" name="VariableQ10" value="D" > D </label></p>
+			<p><label> <input type="radio" name="VariableQ10" value="runtime error" > runtime error </label></p>
+			</li>
+
+			<li>What is returned by this method call?
+<pre>
+String s4 = "i am Roger the Shrubber";
+String s3 = "I'll make him an offer he can't refuse.";
+String letter2 = "a";
+
+s4.charAt(s3.indexOf(letter2))
+</pre>
+			<p><label> <input id="correct11" type="radio" name="VariableQ11" value="o" > o </label></p>
+			<p><label> <input type="radio" name="VariableQ11" value="Roger" > Roger </label></p>
+			<p><label> <input type="radio" name="VariableQ11" value="R" > R </label></p>
+			<p><label> <input type="radio" name="VariableQ11" value="none of the above" > none of the above </label></p>
+			</li>
+
+		</ol>
+		<p><button onclick="checkAnswers(11); return false;">Submit Answers</button></p>
+
+	<p>
+			<a href="Q_Arrays.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_Arrays', window.parent.document).css('font-weight','bold');">&lt;&lt; Previous : </a>
+			<a href="Q_WhileLoops.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_IfStatements', window.parent.document).css('font-weight','bold');">Next &gt;&gt;</a>
+	</p>
+
+		</div>
+	</body>
+</html>

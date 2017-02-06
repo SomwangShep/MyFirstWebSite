@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset = "utf-8"/>
+		<link rel="stylesheet" type="text/css" href="java.css" />
+    	<script src="jquery.js"> </script>
+		<title>Arrays</title>
+	</head>
+	<body>
+		<div class="paddedBox">
+
+	<p>
+			<a href="Q_Variables.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_Variables', window.parent.document).css('font-weight','bold');">&lt;&lt; Previous : </a>
+			<a href="Q_Strings.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_Strings', window.parent.document).css('font-weight','bold');">Next &gt;&gt;</a>
+	</p>
+
+		<h1>Arrays</h1>
+		<ol>
+			<li><p>Write the code to swap the 5<sup>th</sup> element with the 7<sup>th</sup> element in an array of doubles called "stuff".
+				<button onclick="alert(' double[] stuff = {0,1,2,3,4,5,6,7,8};\n double tmp = 0;\n\n tmp = stuff[4];\n stuff[4] = stuff[6];\n stuff[6] = tmp');">
+				Check Answer</button></p></li>
+			<li><p>Write the code to swap all odd elements with the even elements in a String array called "billygoat".  The array has an even number of elements.  Swap the first with the second, and the third with the fourth, and so on.
+				<button onclick="alert(' String[] billygoat = {&quot;ele1&quot;,&quot; ele2&quot;,&quot; ele3&quot;,&quot; ele4&quot;,&quot; ele5&quot;,&quot; ele6&quot;,&quot; ele7&quot;,&quot; ele8&quot;};\n String tmp = &quot;&quot; \n for (int i = 0; i < billygoat.length; i++)\n { \n      tmp = billygoat[i];\n      billygoat[i] = billygoat[i + 1];\n      billygoat[i+1] = tmp;\n      i++;\n }')">
+				Check Answer</button></p></li>
+			<li><p>Write the code to find the largest value in an array of doubles called "charlie".
+				<button onclick="alert(' double[] charlie = {-1.2,0.3,2.5,10.5,6.0,1.5,10.9};\n double max = charlie[0];\n for (int i = 1; i < charlie.length; i++)\n { \n      if (charlie[i] > max) \n      { \n           max = charlie[i]; \n      } \n } \n System.out.println(&quot; Max values is : &quot; + max);')">
+				Check Answer</button></p></li>
+			<li><p>Write the code to sum all the elements in an array of ints called "doris".
+				<button onclick="alert(' int[] doris = {0,5,-5,-1,-6,-3};\n int sum = 0;\n for (int i = 0; i < doris.length; i++)\n { \n      sum = sum + doris[i];\n } \n System.out.println(&quot; sum of array is : &quot; + sum);')">
+				Check Answer</button></p></li>
+			<li><p>Write the code to find the first index where the element is equal to false in an array of booleans called "switchs".
+				<button onclick="alert(' boolean[] switchs = {true, false, false, false, true};\n int index = -1;\n for (int i = 0; i < switchs.length; i++)\n {\n      if (switchs[i] == false)\n      { \n           index = i;\n           break;\n      }\n if (index != -1) \n { \n      System.out.println(&quot; index found : &quot; + index);\n } \n else \n { \n      System.out.println(&quot; index not found&quot;);\n }')">
+				Check Answer</button></p></li>
+		</ol>
+
+	<p>
+			<a href="Q_Variables.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_Variables', window.parent.document).css('font-weight','bold');">&lt;&lt; Previous : </a>
+			<a href="Q_Strings.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuQ_Strings', window.parent.document).css('font-weight','bold');">Next &gt;&gt;</a>
+	</p>
+
+		</div>
+	</body>
+</html>

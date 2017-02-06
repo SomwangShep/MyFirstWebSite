@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset = "utf-8"/>
+		<link rel="stylesheet" type="text/css" href="java.css" />
+		<script src="jquery.js" type="text/javascript"></script>
+		<title>Variables</title>
+	</head>
+	<body>
+		<div class="paddedBox">
+		<table>
+			<tr><td><a href="#InputValidation">Input Validation</a></td><td><a href="#SolvingLoopProblem">Solving Loop Problem</a></td><td><a href="#FlowDiagrams">Flow Diagrams</a></td></tr>
+		</table>
+
+	<p>
+		<a href="Strings.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuIfStatements', window.parent.document).css('font-weight','bold');">&lt;&lt; Previous : </a>
+		<a href="DownLoad.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuDownLoad', window.parent.document).css('font-weight','bold');">Next &gt;&gt;</a>
+	</p>
+
+		<h1>While Loops</h1>
+		<p>A <em>while</em> loop is a <a href="http://www.cs.fsu.edu/~myers/cgs3416/notes/control2.html" target="_blank">repetiton structure</a>. It causes a block of code to run again and again as long as some <a href="http://www.learnjavaonline.org/en/Conditionals" target="_blank">condition</a> is true. The condition is placed in parentheses after the word <em>while.</em> In the example below, the condition will always be true, so the line of code inside the braces will repeat until the program is termintated.</p>
+
+		<p class = "codeblock">while{1 == 1}
+{
+  System.out.println("And I'll say it again.");
+}</p>
+
+	<p style="text-align: center;"><img src="pics/loop.png" alt="flow" /></p>
+
+	<p>Equivalently, we could have used <em>true</em> as a <a href="http://www.learnjavaonline.org/en/Conditionals" target="_blank">condition.</a></p>
+
+		<p class = "codeblock">while{true}
+{
+  System.out.println("And I'll say it again.");
+}</p>
+
+	<p>Note that a semicolon is not placed after the while statement. The while statement only affects the next thing that follows it. We want the next thing to be a block of code in braces. If a semicolon is put after the while statement, the semicolon will be seen as the next thing. Everything before the semicolon (nothing) will repeat again and again forever. The block with the print statement will never be reached.</p>
+
+		<p class = "codeblock">while{true};
+{
+  System.out.println("And I'll say it again."); &#8592; <strong>Don't do this</strong>
+}</p>
+
+	<br>
+
+	<p>A loop that never ends if often called an "infinite loop", and is usually considered undesirable, especially if it doesn't do anything to indicate it is running. Usually the loop is designed so that something happens inside changing the condition, and ending the loop.</p>
+<p class = "codeblock">int x = 1
+while(x &#60; 6)
+{
+	System.out.println("Counting, " + x);
+	x = x + 1;
+}
+
+	<p>In the example above, x is intialized to  to 1. When the loop is reached for the first time, the condition is true. 1 is less than 6. The block inside the while braces runs printing the line</p>
+<p class = "codeblock">Counting, 1</p>
+
+
+	<p>and incrementing the value of x to 2. When the closing brace is reached, the while condition is checked again. Since it is still true(3 is less than 6), the block runs again.</p>
+	<p style="text-align: center;"><img src="pics/loop2.png" alt="flow2" /></p>
+	<p>The fifth time the block runs, "Counting, 5" is printed and, x is incremented from 5 to 6. When the closing of the while loop is reached, the condition is false. 6 is not less than 6. The loop ends, and the program continues.</p>
+
+	<p>The while loop condition is checked before each pass through the loop, including the first.</p>
+	<br>
+
+	<p>The while loop is particularly useful if we don't know in advance how many times the loop will repeat. The following program plays a coin flip game with the user. After each game, the user is asked to play again. If the answer is not "y", the program ends.</p>
+
+<p class = "codeblock">import java.util.Scanner;
+
+public class Coinflip
+{
+	public static void main (String[] args)
+	{
+
+	Scanner in = new Scanner(System.in);
+	String playAgain = "y";
+	String guess;
+
+	while(playAgain.equals("y"))
+	{
+		System.out.println(I flip it, you call it.);
+		System.out.println("h for heads, t for tails.");
+		guess = in.nextLine();
+
+		if(guess.equals("h"))
+		{
+			System.out.println("You lose. It was tails.");
+		}
+		else
+		{
+			System.out.println("Play again? (y or n)");
+			}
+		}
+	}
+
+
+}</p>
+
+	<p>When the program starts, the String variable playagain is in initialized to "y". As long as this is true, the while loop will repeat. At the end of each game, the user is asked to play again. If the user types anything but "y", the while loop will end. This loop might run once, or thousands of times depending on the user.</p>
+	<p>As with if structures, while loops can be nested inside each other. The inner loop will run through all of its repetitions for each pass of the outer loop. </p>
+
+<p class = "codeblock">int cards;
+while playAgain.equals("y")
+{
+	cards = 0;
+	while(cards &#60; 5)
+	{
+		cards = cards + 1;
+	}
+}
+</p>
+		<p>
+			The <a href="https://www.cis.upenn.edu/~matuszek/General/JavaSyntax/break.html">break</a> statement causes the current loop to exit immediately. The program continues after the loop. Note that a break statement is used within a loop. It can not be used to exit an if or else block outside of a loop.
+		</p>
+<p class="codeblock">
+int x = 0;
+while(true)
+{
+	x = x + 1;
+	if(x > 25)
+	{
+		break;
+	}
+}
+system.out.println("X exceeds 25");
+</p>
+		<p>
+			If used in <a href="http://mathbits.com/MathBits/Java/Looping/NestedFor.htm" target="_blank">nested loops</a>, the break statement only exits the innermost loop. There are times when the break statement is particularly convenient, but the preferred method of exiting a loop is to build the exit condition into the design of the loop.
+		</p>
+
+
+		<h2 id="InputValidation">Input Validation</h2>
+		<p>
+			A common use of a while loop is to validate user input. Suppose we ask the user to enter a positive integer. If the user enters a negative number, the program should complain and ask the user to enter a positive number again. This way, we make sure we have good data before we start using it.
+		</p>
+		<p>The following code requires that the user enter a positive integer before moving on.</p>
+<p class="codeblock">
+int x = 1;
+Scanner in = new Scanner(System.in);
+
+while(x &lt; 0)
+{
+	System.out.println("Please enter a positive integer.");
+	x = in.nextInt();
+}
+system.out.println("Yes " + x " is positive.");
+</p>
+		<p>
+		Since x is initialized to -1 (less than 0), the while loop will execute the first time it is reached. After each run through the loop, the condition is checked again. If the user has entered a positive number, the condition x &lt; 0 will be false, and the loop will not run again. The program continues.
+		</p>
+		<p>
+		As a second example of user input validation, suppose we have a game program that asks the user to play again, and expects either "y" or "n" as a response. We would like the program to check this input, and require the user to enter one of the two possible choices.
+		</p>
+
+<p class="codeblock">
+System.out.println("Play again? (y or n)");
+playAgain = in.nextLine();
+
+while( !(playAgain.equals("y") || playAgain.equals("n")) )
+{
+	System.out.println("Please enter y or n.");
+	playAgain = in.nextLine();
+}
+</p>
+		<p>
+		The while loop will repeat as long as the condition is true, and exit when the condition is false. We need a condition that will be true for bad inputs, and false for good inputs (y or n). Consider the condition below.
+		</p>
+		<pre>
+		playAgain.equals("y") || playAgain.equals("n")
+		</pre>
+		<p>
+		This is true if the user entered y or n (a good input) and false otherwise, which is exactly the opposite of what we want. If we use the NOT operator on the entire condition, it will do what we wish.
+		</p>
+		<pre>
+		!(playAgain.equals("y") || playAgain.equals("n"))
+		</pre>
+
+		<h2 id="SolvingLoopProblem">Solving Loop Problem</h2>
+		<p>
+			What is the output of this block of code?
+		</p>
+<p class="codeblock">
+int i = 0;
+int x = 2;
+
+while (i &lt;= 4)
+{
+	i++;
+	x = x * 2;
+}
+
+System.out.println("i = " + i);
+System.out.println("x = " + x);
+</p>
+		<p>
+		For problems involving loops, it is often useful to make a table showing the values of the variable after each pass through the loop. For the problem above, we want to repeat the loop until I is no longer less than or equal to 4.
+		</p>
+		<table>
+			<thead>
+				<tr><th>When</th><th>i</th><th>x</th></tr>
+			</thead>
+			<tr><td>Initially</td><td>0</td><td>2</td></tr>
+			<tr><td>After first pass</td><td>1</td><td>4</td></tr>
+			<tr><td>After second pass</td><td>2</td><td>8</td></tr>
+			<tr><td>After third pass</td><td>3</td><td>16</td></tr>
+			<tr><td>After fourth pass</td><td>4</td><td>32</td></tr>
+			<tr><td>After fifth pass</td><td>5</td><td>64</td></tr>
+		</table>
+		<p>
+		After the loop completes for the fifth times, i is 5, which is not less than or equal to 4. The loop ends, and the answer is:
+		</p>
+		<pre>
+		i = 5
+		x = 64
+		</pre>
+
+		<h2 id="FlowDiagrams">Flow Diagrams</h2>
+		<p>
+			A while loop can be depicted by a flow diagram in much the same way as an if/else structure. A diamond shape is used to represent the while condition. The diamond has a true branch and false branch. The true branch leads to the code block and loops back to the diamond. The false branch exits the loop.
+		</p>
+		<p style="text-align: center;">	<img src="pics/93.jpg" alt="Flow Diagram" />	</p>
+
+	<p>
+		<a href="Strings.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuIfStatements', window.parent.document).css('font-weight','bold');">&lt;&lt; Previous : </a>
+		<a href="DownLoad.html" target="mainFrame" onclick="$('#sidebar a', window.parent.document).css('font-weight','normal'); $('#MenuDownLoad', window.parent.document).css('font-weight','bold');">Next &gt;&gt;</a>
+	</p>
+
+		</div>
+	</body>
+</html>
